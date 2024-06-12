@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listeleme Şekilleri</title>
+</head>
+<body>
+    <h2>Listeleme Şekilleri</h2>
+    <h3>Sıralı Listeler</h3>
+    <p>
+        Sıralı listeler oluşturmak için html <strong>ol (ordered list)</strong> etiketini kullanıyoruz. Listenin herbir elemanını <em>li</em> etiketi ile ve listeleme sembolünü (numaralar, harfler, romen rakamları gib) de <em>type</em> özelliği ile belirliyoruz. Sıralamanın kaçıncı değerden başlayacağını da istersek <b>Start</b> özelliği ile değiştirebiliyoruz.
+    </p>
+    <h3>Eğitimlerimiz</h3>
+    <ol>
+        <li>Yazılım Eğitimleri </li>
+        <ol type="a">
+            <li>C#.Net Core</li>
+            <li>Asp.Net Core</li>
+            <li>Entity Framework Core</li>
+        </ol>
+
+        <li>Veritabanı Eöitimleri</li>
+        <ol type="a" start="4">
+            <li>MS-Sql Server</li>
+            <li>My-Sql</li>
+            <li>Oracle Server</li>
+        </ol>
+        <li>Mobile Eğitimleri</li>
+
+    </ol>
+    <h3>Sırasız Listeler</h3>
+    <p>
+        Sırasız listeler oluşturmak için html <strong>ul (unordered list)</strong> etiketini kullanıyoruz. Listenin herbir elemanını <em>li (list item)</em> etiketi ile ve listeleme sembolünü (disc, square, circle gibi) de <em>type</em> özelliği ile belirliyoruz. Sıralamanın kaçıncı değerden başlayacağını da istersek <b>Start</b> özelliği ile değiştirebiliyoruz.
+      </p>
+      
+    <ul>
+        <li>Yazılım Eğitimleri </li>
+        <ul>
+            <li>C#.Net Core</li>
+            <li>Asp.Net Core</li>
+            <li>Entity Framework Core</li>
+        </ul>
+
+        <li>Veritabanı Eöitimleri</li>
+        <ul type="circle">
+            <li>MS-Sql Server</li>
+            <ul type="square">
+                <li>T-Sql</li>
+            </ul>
+            <li>My-Sql</li>
+            <li>Oracle Server</li>
+            <ul type="square">
+                <li>
+                    PL-Sql
+                </li>
+            </ul>
+        </ul>
+        <li>Mobile Eğitimleri</li>
+
+    </ol>
+</body>
+</html>
