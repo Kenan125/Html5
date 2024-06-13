@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo ile Tasarım</title>
+</head>
+<body>
+    <h2>Table komutu ile sayfa tasarımı</h2>
+    <p>
+        Table etiketi ile sayfamızı satır ve sütunlara bölerek, verilerimizi veya resimlerimizi daha düzenli bir şekilde sayfaya yerleştirebiliriz.
+    </p>
+    <p>
+        <strong>Table</strong> kullanımında satırları <b>tr</b> ile, sütunları ise <b>td</b> ile ekleyebiliyoruz
+    </p>
+    <p>
+        cellspacing özelliği ile hücreler arası boşlukları (margin) <b>cellpadding</b> ile hücre içindeki verilerin çerçevelere olan uzaklıklarını (padding) belirleyebiliyoruz
+    </p>
+    <p>Genel olarak bir tabloyu başlık (thead) ve gövde (tbody) şeklinde 2 bölüme ayırabiliriz.</p>
+    <p>
+        Tablolarda daha ayrıntılı bir tasarım yapabilmek için kolon veya satır düzeyinde istediğimiz sayıda hücreyi birleştirebiliriz. <b>colspan</b> ile istediğimiz adet kolonu yanyana (sağa doğru) birleştirirken, <b>rowspan="adet"</b> ile kolon düzeyinde istediğimiz adet satır hücresini aşağıya doğru birleştirebiliriz.
+    </p>
+    <table width="400" height="200" border="1" cellspace="5" cellpadding="25" align="center">
+        <thead>
+            <caption><font face="Verdana" size="3" color="blue">Tablo Genel Başlık</font></caption>
+            <tr>
+                <th>Başlık-1</th>
+                <th>Başlık-2</th>
+                <th>Başlık-3</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>1.1</td>
+            <td colspan="2" bgcolor="#00FF00">1.2-3</td>
+            
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td rowspan="2">2.3-3.3</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <!-- 3.3 iptal -->
+            
+        </tr>
+    </table>
+    <h3>Renk Kullanımı</h3>
+    <p>Renkleri ingilizce isimleriyle (red, green. blue gibi) verebildiğimiz gibi, başına # sembolü getirerek Hexadecimal olarak RGB (Red-Gre-Blue) sistemine uygun bir şekilde de verebiliriz.</p>
+    <p>Hexadecimal Sayı Sistemi (16'lı sayı sistemi)</p>
+    0,1,2,3,....,9,A,B,C,D,E,F 
+    <p>
+        #000000 -> Black - Siyah <br>
+        #FFFFFF -> White - Beyaz <br>
+        #FF0000 -> Red - Kırmızı <br>
+        #00FF00 -> 
+    </p>
+</body>
+</html>

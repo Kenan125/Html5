@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo ile Tasarım</title>
+</head>
+<body>
+    <!-- 
+    -Tablonun üst genel başlığı Mevsimler, alt genel başlığı Aylar olsun.
+    -Başlık satırında İlkBahar Yaz Sonbahar Kış olsun.
+    -Her sütunda o mevsime (başlığa) karşılık gelen aylar alt alta sıralansın
+    -İlkbahar sütunu yeşil, Yaz sütunu kırmızı, Sonbahar sütunu sarı, Kış sütunu beyaz olsun    
+    
+    -->
+    <table width="400" height="200" border="1" cellspace="5" cellpadding="25" align="center">
+        <thead>
+            <caption><font face="Verdana" size="3" color="blue">Mevsimler</font></caption>
+            <tr>
+                <th>İlkBahar</th>
+                <th>Yaz</th>
+                <th>Sonbahar</th>
+                <th>Kış</th>
+            </tr>
+        </thead>
+        <tr>
+            <td align="center">
+                <ul>Mart</ul>
+                <ul>Nisan</ul>
+                <ul>Mayıs</ul>
+            </td>
+            <td colspan="2" bgcolor="#00FF00">1.2-3</td>
+            
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td rowspan="2">2.3-3.3</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <!-- 3.3 iptal -->
+            
+        </tr>
+    </table>
+</body>
+</html>
