@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css3 Söz Dizimi-Seçiciler</title>
+    <!--         Declaration Block (Bildirim Bloğu)
+        Selector {property:value; property:value;}
+         seçici    özellik değer
+    -->
+    <!--
+        Html sayfasındaki etiketlere 3 farklı şekilde ulaşabiliriz:
+        1- Html Etiketleri  (Tags) (Doğal Seçiciler)
+        2- Etiket Id'leri   (Tag Id's)
+        3- Etiket Class'ları (Tag Classes)
+    -->
+    <!--
+    1- Html etiketleri doğal olarak seçici (selector) kabul edilirler.
+    2- Çok sayıda html etiketini birbirinden ayırmak için her birine farklı bir id özelliği tanımlayabiliriz. Bu sayede sadece istediğimiz etikete istediğimiz css biçimlendirmelerini uygulayabiliriz. Id'lere css tanımlamak için başına # sembolünü getirmeliyiz.
+    3- Bir html etiketine birden fazla css vermek veya birden fazla html etiketine aynı css özelliğini vermek için class seçicilerini kullanıyoruz. Class seçicisine css tanımlamak için başına . (nokta) sembolü getirmeliyiz. 
+    -->
+    <style>
+        h1 {color:blue}
+        h2 {color: red}
+        h1, h2 {font-family: Arial;}
+        p {font-family: Verdana;}
+        ol {list-style: none;}
+        h2 {font-family: comic sans ms;}
+        span {font-style: italic; font-weight: bold;}
+        div {background-color: lightblue;}
+        #tags {background-color: aqua;}
+        #Ids {background-color: aquamarine;}
+        #text1 {color: maroon}
+        /* p.uyari {font-weight: bold;} */
+        .uyari {font-weight: bold;}
+        .aktif {font-style: italic; color: blue}
+        .onemli {color:blueviolet}
+        .uyari.onemli {background-color: yellow;}
+    </style>
+
+</head>
+<body>
+    <h1>Css (Cascading Stylesheet) Biçimlendirme</h1>
+    <div id="genel">
+        <h2>Css Selectors</h2>
+        <ol class="uyari">
+            <li>Html Tags</li>
+            <li>Tag Id's</li>
+            <li class="aktif">Tag Classes</li>
+        </ol>
+        <div id="tags">
+            <h2 class="onemli">Html Etiketleri-Tags</h2>
+            <p class="uyari">Html etiketleri doğal seçici kabul edilir.</p>
+        </div>
+        <div id="Ids">
+            <h2>Etiket Id'leri</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem unde et repellendus ad quas iure praesentium culpa delectus ipsam vitae, <span>repellat dicta</span> voluptatibus laboriosam tenetur cumque fugiat modi! Vel, reiciendis!</p>
+            <p id="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dolorem!</p>
+        </div>
+    </div>
+    <p class="uyari onemli"> <b>Etiket Class'ları</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aperiam ut nostrum consequatur ullam sint!
+    </p>
+</body>
+</html>

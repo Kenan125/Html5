@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <!-- Form ortalansın, email, password ve remember me bilgilerini sunucuya göndersin.
+    Göndermeden önce email bilgisinin doğru formatta olup olmadığı kontrol edilsin,
+    Email ve password bilgileri boş geçilemesin,
+    Girilen password bilgisi ekranda görünmesin.
+    -->
+    <form action="/Account/Login">
+    <table width="260" border="1" align="center" cellpadding="5">
+        <thead>
+            <caption>Kullanıcı Girişi</caption>
+        </thead>
+        <tbody>
+        <tr>
+            <td><label for="mail">Email</label></td>
+            <td><input type="email" id="mail" name="mail" placeholder="email adresi giriniz..." required></td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password</label></td>
+            <td><input type="password" id="pass" name="pass" placeholder="şifrenizi giriniz..." required></td>
+        </tr>   
+        <tr>
+            <td colspan="2" align="center"><input type="checkbox" name="hobi" value="1">Remember me
+            </td>
+        </tr> 
+        <tr align="center">
+            <td colspan="2"><input type="submit" value="User Login"></td>
+        </tr>
+    </tbody>
+    </table>
+</form>
+</body>
+</html>

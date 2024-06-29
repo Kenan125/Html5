@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Etiketleri</title>
+</head>
+<body>
+    <h2>Form Etiketlerinin Kullanımı</h2>
+    <p>
+        Sayfa içinde kullanıcıdan alınacak bilgilerin istenilen bir programlama ortamıyla etkileşime geçmesi için bir <strong>form</strong> elementi kullanıyoruz.
+    </p>
+    <p>
+        Form elementlerinin büyük bir çoğunluğu <b>input</b> etiketinin altında bulunur ve <b>type</b> özelliğinin değiştirilmesiyle kullanılır.
+    </p>
+    <p>
+        Input etiketlerine verilecek <b>id</b> değeri daha çok css tanımlamalarında, <b>name</b> değeri ise programlama ortamlarına veri aktarılırken kullanılır.
+    </p>
+    <p>
+        <b>required</b> özelliği verildiğinde sayfa submit butonu ile onaylandığında ilgili alanın boş geçilmemesi, mutlaka bilgi girişi yapılması için html kullanıcıyı uyarır.
+    </p>
+    <p>
+        <b>type="radio"</b> seçtiğimizde, radio butonlardan sadece birinin seçilebilmesi için her birine aynı name bilgisinin (name="cns") verilerek bir grup oluşturulması gerekir.
+    </p>
+
+    <h2>Kullanıcı Girişleri (input)</h2>
+    <form action="/Home/Index">
+    <table width="300" border="3" cellpadding="3">
+        <tr>
+            <td width="70"><label for="ad">Adı</label></td>
+            <td><input type="text" id="ad" name="ad" placeholder="ismini giriniz..." autofocus required></td>
+        </tr>
+        <tr>
+            <td><label for="soyad">Soyadı</label></td>
+            <td><input type="text" id="soyad" name="soyad" placeholder="soyismini giriniz..."></td>
+        </tr>
+        <tr>
+            <td><label for="mail">Email</label></td>
+            <td><input type="email" id="mail" name="mail" placeholder="email adresi giriniz..." required></td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password</label></td>
+            <td><input type="password" id="pass" name="pass" placeholder="şifrenizi giriniz..." required></td>
+        </tr>   
+        <tr>
+            <td><label for="adres">Adres</label></td>
+            <td><textarea id="adres" name="adres" cols="20" rows="3"></textarea></td>
+        </tr> 
+        <tr>
+            <td><label for="tarih">Tarih</label></td>
+            <td><input type="date" id="tarih" name="tarih"></td>
+        </tr> 
+        <tr>
+            <td><label for="cns">Cinsiyet</label></td>
+            <td><input type="radio" id="cns" name="cns" value="Erkek" checked>Erkek
+                <input type="radio" id="cns" name="cns" value="Kadın">Kadın</td>
+        </tr>  
+        <tr>
+            <td><label for="hobi">Hobiler</label></td>
+            <td><input type="checkbox" name="hobi" value="Futbol">Futbol
+                <input type="checkbox" name="hobi" value="Sinema">Sinema
+                <input type="checkbox" name="hobi" value="Müzik">Müzik
+            </td>
+        </tr> 
+        <tr>
+            <td><label for="kurs">Kurs</label></td>
+            <td>
+                <select name="kurs" id="kurs">
+                    <option value="0">Seçiniz</option>
+                    <option value="1">Web Tasarım</option>
+                    <option value="2">Web Programlama</option>
+                    <option value="3">Mobil Programlama</option>
+                </select>
+            </td>
+        </tr>   
+        <tr>
+            <td><label for="sure">Kurs Süresi</label></td>
+            <td>
+                <input type="number" name="sure" min="1" max="6" value="1">
+            </td>
+        </tr> 
+
+        <tr align="center">
+            <td colspan="2"><input type="submit" value="Kaydet"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

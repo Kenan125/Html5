@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div ile Sayfa Tasarımı</title>
+</head>
+<body>
+    <h2>Div Etiketi ile Sayfa Bölümleme, Gruplama</h2>
+    <p>
+        SEO (Search Engine Optimization) açısından uzun zamandır sayfa tasarımında ekranımızı bölümlere ayırmak için <del>table</del> yerine <ins><strong>div</strong></ins> elementini kullanıyoruz.
+    </p>
+    <p>
+        Div etiketinin temel amaçlarından biri de istediğimiz html etiketlerini gruplandırmak ve kolaylıkla biçimlendirilmelerini sağlamaktır.
+    </p>
+    <p>
+        div, p, h1, h2 gibi html etiketleri block özelliğinde olup, <span>tüm satırı kaplama</span> eğilimindedirler. Bu etiketlere genişlik ve yükseklik değerleri verebiliriz.
+    </p>
+    <p>
+        span gibi etiketler ise inline özelliğinde olup, sadece içindeki bilgiler kadar yer kaplarlar. Bu etiketlere genişlik ve yükseklik değeri vermeyiz.
+    </p>
+    <p>
+        div etiketlerine float özelliği vererek block özelliğini kaldırıp, inline (inline-block) özelliğine geçirmiş olduk.
+    </p>
+
+    <div style="float:left"><h2>1.division</h2></div>
+    <div style="float:left"><h2>2.division</h2></div>
+    <div style="clear:both"><h3>float özellikleri temizlenir.</h3></div>
+    <div style="width: 300px; height: 150px; background-color: aquamarine; float: left;">
+        <div style="width:150px; height: 100px; background-color: yellow;">
+        </div>
+    </div>
+    <div style="width: 300px; height: 200px; background-color: pink; float:right">
+    </div>
+    <div style="clear:both"><h3>float özellikleri temizlenir.</h3></div>
+    <div style="width:300px; height: 200px; background-color: blue; color:white; margin: 20px; padding: 10px; float:left">Kutu-1    
+        <div style="width: 150px; height: 100px; background-color: yellow; color: navy; margin: 15px; padding: 10px;">Kutu-2
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <div style="width:300px; height: 200px; background-color: red; color:white; margin: 20px; padding: 10px; float:right">Kutu-1    
+        <div style="width: 150px; height: 100px; background-color: yellow; color: navy; margin: 15px; padding: 10px;">Kutu-2
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+
+    <div style="clear:both; width:800px; height: 30px; background-color: bisque;">Footer-Copyright @2024</div>
+    
+</body>
+</html>
