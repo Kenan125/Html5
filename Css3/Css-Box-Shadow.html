@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+    <!--
+    box-shadow: h-offset v-offset blur spread color
+    h-offset : yatayda (x) soldan sağa doğru gölgeleme verir.
+    v-offset : düşeyde (y) yukarıdan aşağıya doğru gölgeleme verir.
+    blur : gölgenin bulanıklık derecesini,
+    spread : bulanıklığın boyutunu,
+    color : gölgelemenin rengini belirtir.
+    yatay ve düşey offset değerlerini vermek zorunlu, diğerleri opsiyoneldir.
+    İnternetten hazır shadow örnekleri bulup kullanabilir yada shadow generator aracılığıyla kendi örneklerinizi internet üzerinde oluşturabilirsiniz.
+    -->
+
+    <style>
+        body {background-color: lemonchiffon;}
+        #container {width:100%; text-align: center;}
+        #row {margin: 10px;}
+        h1 {
+            text-shadow: 2px 2px 3px #ff0000;
+        }
+        h3 {
+            color: maroon; font-weight: bold;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: burlywood; 
+            margin: 30px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .shadow1 {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+        .shadow2 {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .shadow3 {
+            box-shadow: 18px 24px 24px 4px rgba(113,214,201,0.58);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Movie Market Yerli-Yabancı Filmler</h1>
+        <div id="row">
+            <div class="box shadow1">
+                <h3>Vizyondaki Filmler</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+            </div>
+            <div class="box shadow1">
+                <h3>Gelecek Filmler</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+            </div>
+            <div class="box shadow1">
+                <h3>Popüler Filmler</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+            </div>
+        </div>
+        <div id="row">
+            <div class="box shadow1">
+                <h3>Vizyondaki Filmler</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+            </div>
+            <div class="box shadow1">
+                <h3>Gelecek Filmler</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+            </div>
+            <div class="box shadow1">
+                <h3>Popüler Filmler</h3>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="box shadow1">
+        <h3>Vizyondaki Filmler</h3>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+    </div>
+    <div class="box shadow2">
+        <h3>Gelecek Filmler</h3>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+    </div>
+    <div class="box shadow3">
+        <h3>Popüler Filmler</h3>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, ipsam.
+    </div> -->
+</body>
+</html>

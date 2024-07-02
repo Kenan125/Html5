@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Css Biçimlendirme</title>
+    <!--
+        Internal Css (sayfa içi style özelliği kullanarak)
+        - Tüm sayfa için geçerli css tanımları yapılır.
+        - Sadece bu sayfa için geçerlidir.
+        - Css kodları ile html kodları birbirinden ayrılmış olur.
+    -->
+        <!-- <link rel="stylesheet" href="Style.css"> -->
+         <style>
+            @import "Style.css";
+         </style>
+</head>
+<body>
+    <div id="genel">
+        <div id="header" >
+                FİRMA<br>LOGO<br>Header
+        </div>
+        <div  id="topmenu" >
+            Anasayfa Ürünler Hakkımızda İletişim</div>
+        <div id="nav">Menu-Nav
+        </div>
+        <div id="main" style="background-color: white; width: 56%; height:200px; float: left; margin-left: 1%;margin-right: 1%">Main-Content</div>
+        <div id="aside" >
+            <div class= "aside">aside-1</div>
+            <div class="aside">aside-2</div>
+            <div class="aside">aside-3</div>
+        </div>
+        <div id="footer">Copyright &copy; Bright 24 FullStack Yazılım</div>
+    </div>
+</body>
+</html>

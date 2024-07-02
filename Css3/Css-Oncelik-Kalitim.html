@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Öncelik - Kalıtım</title>
+    <!-- 
+    Html etiketlerinin özellikleri değiştirilirken öncelik sıraları aynı olduğunda, sıradan çalıştırılır ve sonradan gelen öncelikli ezer.
+    - Eğer aynı özellikler değiştirilirken kullanılan html seçicilerinin öncelik
+    Css Öncelikleri
+     
+    
+    1- Etiketin style (inline) özelliği (attribute)
+    2- Id Seşiciler (selectors)
+    3- Class Seşiciler
+    4- Tag Seçiciler (Html elementleri)
+    5- Browser defaults
+    
+    
+    Kalıtım (Inheritance)
+
+- Html elementlerinin özellikleri inherited (kalıtılabilen) ve non-inherited (kalıtılamayan) olmak
+üzere ikiye ayrılır.
+- Örneğin color, font-family gibi özellikler inherited yapıda iken, border gibi özellikler non-inherited
+gruba girer.
+- Eğer inherited olan bir özelliğin içerideki etiketlere aktarılmasını istemezsek, içerideki etiketlerin bu özelliklerine initial değerini vermemiz gerekir.
+    
+    - Tersi olarak non inherited olan etiketlerin özelliğinin altındakı etiketlere uygulanması için, aynı özelliklerine inherit
+    
+    
+    -->
+    <style>
+        #baslik {color: green;}
+        .kirmizi{color: red;}
+        h2{color: blue;}
+        p{color: red;font-family: Verdana; border: 2px solid green; }
+        span {color: initial; border: inherit;}
+
+    </style>
+</head>
+<body>
+    
+    <h2 id="baslik" class="kirmizi" style="color: orange;">Css Öncelik Sırası</h2>
+    <h2>bu mavi</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <span>voluptate porro earum, quaerat nisi aut </span> cupiditate minima suscipit enim, odit, ab accusantium nobis quibusdam nesciunt non quas veritatis ut illum.</p>
+</body>
+</html>

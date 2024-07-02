@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Selectors</title>
+    <!-- Other Selectors
+    - Group Selectors
+    - Attribute Selectors
+    - Pseudo Selectors
+    
+    Group Selectors :  Belirli bir kapsam içindeki etiketlere ulaşmamızı sağlar.
+    * : Evrensel seçici (tüm etiketleri kapsar.)
+    div, p : Tüm div ve tüm p etiketleri
+    div p : div içindeki tüm p etiketleri
+    div > p : üst etiketi div olan tüm p etiketleri
+    div ~ p : div ile ayn; seviye 
+
+    Attribute Selectors : Etiketlerin içindeki nitelikleri (attribute) (src, alt, title, href gibi) kullanarak css tanımlamamızı sağlar.
+    img[title] : title attribute olan img etiketleri
+    img[title="ev resimleri"] : title attribute ev resimleri olan img etiketleri
+    img[alt~="ev"] : alt attribute içinde ev geçen img etiketleri
+    img[alt^="ev"] : alt attribute ev kelimesiyle başlayan img etiketleri
+    img[alt$="resimleri"] : alt attribute resimleri kelimesiyle biten img etiketleri
+
+
+    Pseudo Selectors : Html etiketlerinin durumunu kontrol edip sonra css uyguluyoruz.
+    selector:pseudo-class {}
+
+    a:link {} henüz ziyaret edilmemiş link 
+    a:visited {} ziyaret edilmiş link
+    a:hover {} link üzerinde mouse ile gezinirken
+    a:active {} link üzerinde mouse ile tıklandığında
+    a:focus {} link üzerinde focus (tab ile) iken
+    div:hover {} mouse ile div üzerine gelindiği anda
+
+    -->
+    <style>
+        a{font-family: Verdana; text-decoration: none;}
+        a:hover{color: brown;}
+        a:active{color: aqua;}
+        /*a:visited{color: red;}*/
+        section:hover{background-color: yellow;}
+        li:first-child{color: blue;}
+        li:last-child{font-weight: bold;}
+        p::first-letter{text-transform: uppercase;}
+        P::first-line{text-transform: capitalize;}
+        h2::before{content: url(../images/favicon.ico);}
+        h2::after{content: url(../images/favicon.ico);}
+        img[alt^="ev"]{width: 300px;}
+        img[title^="sokak"] {width: 350px;}
+        div p {color: blue;}
+        section > p {color: red;}
+        div ~ p {font-style: italic;}
+        div + p {color: green;}
+    </style>
+</head>
+<body>
+    
+    <div id="genel">
+        <h2>Css Selectors</h2>
+        <ol >
+            <li>Html Tags</li>
+            <li>Tag Id's</li>
+            <li >Tag Classes</li>
+        </ol>
+        <div id="tags">
+            <h2 >Html Etiketleri-Tags</h2>
+            <p id="text1">Html etiketleri doğal seçici kabul edilir.</p>
+        </div>
+        <div id="Ids">
+            <h2>Etiket Id'leri</h2>
+            <p id="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem unde et repellendus ad quas iure praesentium culpa delectus ipsam vitae, <span>repellat dicta</span> voluptatibus laboriosam tenetur cumque fugiat modi! Vel, reiciendis!</p>
+            <p id="text3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dolorem!</p>
+            <section>
+                <p><b>section içinde</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, pariatur.</p>
+            </section>
+        </div>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id omnis quam eius cupiditate.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, consequatur maiores quidem molestias dolores unde? Sint repellendus voluptatibus est quaerat deserunt fuga commodi, minus, fugiat quisquam eaque asperiores amet nesciunt.</p>
+    </div>
+    <p id="digerText"> <b>Etiket Class'ları</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio aperiam ut nostrum consequatur ullam sint!
+    </p>
+    <br>
+    <a href="#">Anasayfa</a>&nbsp;&nbsp;
+    <a href="#">İletişim</a>&nbsp;&nbsp;
+    <a href="#">Hakkımızda</a>&nbsp;&nbsp;
+    <br>
+    <img src="../images/EvResimleri.jpg" alt="ev resimleri" title="ev resimleri">
+    <img src="../resimler/SokakResmi.jpg" alt="sokak" title="sokak resimleri">
+</body>
+</html>

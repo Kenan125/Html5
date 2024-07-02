@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /* Css Box Model (Kutu Modeli)
+        - Css, Html elementlerine kutu (box) modelini uygular.
+        - Default olarak kutu boyutu hesaplaması (box sizing) içeriğe (content) göre yapılır.
+        - Box Sizing : border + padding + content
+        - Eğer box sizing hesaplaması border-box olarak seçilirse, hesap yapılırken border ve padding değerleri çıkarılarak sadece içerik (content) dikkate alınır.
+         */
+        * {
+            /* box-sizing: content-box;     default özellik */
+            box-sizing: border-box;  
+            /*dış çerçeve büyüklüğü korunuyor. border ve padding değerleri çıkarılarak içerik hesaplandığından, içerik için ayrılan alan azalıyor. */
+        }
+        body {margin: 0px;}
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        #box1 {
+            background-color: yellow; 
+            /* width: 100% */  /*kapsayıcı body'ye göre*/
+        }
+        #box2 {
+            background-color: blue;
+            width: 60%; /*kapsayıcı box1'e göre*/
+            height: 60%; color:white;
+            padding: 20px;
+            border: 15px solid red
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">
+        <h3>dışarda</h3>
+        <div id="box2" class="box">
+            <h3>içerde</h3>
+             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, sed!</p> -->
+        </div>
+    </div>
+</body>
+</html>
