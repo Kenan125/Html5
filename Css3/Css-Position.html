@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Position</title>
+    <!--
+    position: static, relative, absolute, fixed, sticky
+    static: default seçenektir. Elementler normal akış içerisinde konum alırlar. Margin değerleri verebiliriz. Ancak top, bottom, left, right geçerli değildir.
+    relative : elementler bulundukları konumdan itibaren akışı bozmadan 4 yönde hareket edebilirler. Yani top, bottom, left, right geçerlidir.
+    absolute : bu özelliğe sahip olan element normal akıştan çıkar, diğerleri onu görmezler. Herhangi bir element relative özelliğindeyse ona göre hareket eder, aksi durumda doğal relative kabul edilen body'ye göre hareket eder. 
+    -->
+    <style>
+        body {margin:0; color: wheat}
+        .box {
+            width: 150px;
+            height: 150px; 
+            /* margin: 20px; */
+            top: 20px;  
+            left: 20px;        
+        }
+        #box1 {
+            background-color: maroon;
+            position: relative;
+        }
+        #box2{
+            background-color: yellow;
+            width: 60%;
+            height: 60%;
+            position: absolute;
+            left: -10px;
+            top: 80px;
+            z-index: 2; /* - değerde element alta geçer, + değerde element üste geçer. Ancak birden fazla pozitif değerde*/
+        }
+        #box3 {
+            background-color: blue;
+        }
+        #box4{
+            background-color: lightgreen;
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Kutu-1
+        <div id="box2" class="box">
+            Kutu-2
+        </div>
+        <div id="box4" class="box">Kutu-4</div>
+    </div>
+    <div id="box3" class="box">
+        Kutu-3
+    </div>
+</body>
+</html>

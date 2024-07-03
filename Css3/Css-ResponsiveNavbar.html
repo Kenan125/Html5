@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        body {background-color: wheat;}
+        * {margin: 0; }
+        header {
+            height: 40px;
+            background-color: burlywood;
+            padding-left: 15px;
+            padding-top: 15px;
+            font-family: Trebuchet MS;
+        }
+        nav {
+            display: inline-block;
+            text-align: right;
+            width:calc(100% - 100px);  /*calc(100%), tarayıcının genişliği değiştiği anda nav elementinin güncel genişliğini hesaplıyor. */
+        }
+        a {
+            text-decoration: none;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .nav-items { list-style: none; }
+        .nav-item {
+            display: inline-block;
+            width: 70px;
+            padding: 5px;
+        }
+        .nav-item-button {
+            background-color: maroon;
+            border: 2px solid white;
+            border-radius: 12px;
+        }
+        #banner {
+            height: 400px;
+            background-image: url(../images/movie-picture2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {color: wheat}
+        h3 {margin-bottom: 10px; color:maroon}
+        .row {
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        .col {
+            display: inline-block;
+            width: 25%;
+            background-color: burlywood;
+            height: 130px;
+            border: 2px solid maroon;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+        }
+        .scroll {overflow: auto;}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">LOGO</a>
+        <nav>
+            <ul class="nav-items">
+                <li class="nav-item nav-item-button"><a href="#">Home</a></li>
+                <li class="nav-item nav-item-button"><a href="#">Contact</a></li>
+                <li class="nav-item nav-item-button"><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="banner">
+        <h1>Best Movies</h1>
+    </div>
+    <div class="row">
+        <div class="col scroll">
+            <h3>Vizyondaki Filmler</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+                
+            </p>
+        </div>
+        <div class="col scroll">
+            <h3>Popüler Filmler</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+            </p>
+        </div>
+        <div class="col scroll">
+            <h3>Gelecek Filmler</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus iusto dicta delectus eveniet itaque.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
