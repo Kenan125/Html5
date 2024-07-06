@@ -41,3 +41,9 @@ while ( i<=100&& sayac< 5) {
 i++
     
 }
+
+
+i = 10;
+do{
+    console.log(i)
+}while(i<5)
