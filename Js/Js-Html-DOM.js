@@ -26,6 +26,8 @@ sonuc = document.querySelector("#sonuc")
 //sonuc = sonuc.innerHTML
 sonuc.style.fontSize = "24px"
 
+document.querySelector(".egik").style.fontStyle = "italic" //Class'i egik olan paragrafi yakalayarak yazi tipini italic yapar
+
 sonuc= document.querySelector("li")
 sonuc.style.color = "blue" //Ilk li etiketini yakalar
 
@@ -73,5 +75,15 @@ sonuc = document.querySelectorAll("#liste2 .item")
 for(const item of sonuc){
     item.style.color = "maroon"
 }
+//Olaylar (Events)
+//<element event="Javascript kodlari"/>
+//Html Olaylari
+//onchange, onclick, onmouseover, onmouseout, onkeydown, onload
+
+//document.onload = alert("Sayfa yuklendi")
+
+
+
+
 
 console.log(sonuc)

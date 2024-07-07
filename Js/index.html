@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM-Document Object Model</title>
-</head>
-<body>
-    <h2 id="baslik">Baslik</h2>
-    <p id="giris">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptates.</p>
+  </head>
+  <body>
+    <h2 id="baslik">HTML-DOM</h2>
+    <button
+      onclick="document.getElementById('giris').innerHTML = 'Tikladiniz...'"
+    >
+      Tiklayin...
+    </button>
+    <button
+      id="button"
+      onclick="document.getElementById('button').innerHTML = 'Tikladiniz...'"
+    >
+      Tikla
+    </button>
+    <button onclick="this.innerHTML = 'Tikladiniz...'">Tiklaaaaa...</button>
+    <button onclick="this.style.color = 'red'">Tiklayin...</button>
+    <button onclick="this.style.color = 'red'">Tiklayin...</button>
+    <p id="giris">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, voluptates.
+    </p>
     <p id="sonuc">Tekli Element Bulma</p>
     <div id="icerik" class="egik">Coklu Element Bulma</div>
     <ul id="liste1">
-        <li class="item">Id'ye gore</li>
-        <li class="item">Class'a gore</li>
-        <li class="item">Tag'e gore</li>
+      <li class="item">Id'ye gore</li>
+      <li class="item">Class'a gore</li>
+      <li class="item">Tag'e gore</li>
     </ul>
     <ul id="liste2">
-        <li class="item">Id'ye gore</li>
-        <li class="item">Class'a gore</li>
-        <li class="item">Tag'e gore</li>
+      <li class="item">Id'ye gore</li>
+      <li class="item">Class'a gore</li>
+      <li class="item">Tag'e gore</li>
     </ul>
+
+<div id="result" style="width: 200px; height: 100px; border:1px solid maroon; border-radius: 10px; padding: 10px;" onmouseover="renklendir()" onmouseout="renkkaldir()">Sonuc Listesi</div>
+
     <script src="Js-Html-DOM.js"></script>
-</body>
+    <script>
+        function degistir(){
+            document.getElementById('giris').innerHTML = 'Tikladiniz....'
+        }
+        function renklendir(){
+            document.getElementById("result").style.color = "white"
+            document.getElementById("result").style.backgroundColor = "blue"
+        }
+        function renkkaldir(){
+            document.getElementById("result").style.color = "blue"
+            document.getElementById("result").style.backgroundColor = "yellow"
+        }
+    </script>
+  </body>
 </html>
